@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: rgb(231, 231, 231);
+        }
+
+        header {
+            background-color: #00ffc899;
+            color: #fff;
+            text-align: center;
+            padding: 0.5px;
+        }
+
+        footer {
+            background-color: #00ffc899;
+            color: #fff;
+            font-size: small;
+            text-align: center;
+            padding: 0.1px;
+        }
+
+        div {
+            color: rgb(231, 231, 231);
+            font-size: small;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #00b09c;
+        }
+
+        #result {
+            color: black;
+            font-size: medium;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Konversi Suhu</h2>
+    </header>
+
+
+    <label for="inputSuhu">Suhu :</label>
+    <input type="number" id="inputSuhu" placeholder="Masukkan Suhu">
+
+    <button onclick="Celsius()">Celcius Konversi ke Fahrenheit</button>
+    <button onclick="Fahrenheit()">Fahrenheit Konversi ke Celsius</button>
+
+    <div id="result"></div>
+
+    <div>
+        <a>hghghgjgjgjgjgj</a>
+    </div>
+
+    <footer>
+        <p>Hak Cipta &copy; 2024 Rakha Adhiwdiya</p>
+    </footer>
+
+    <script>
+        function Celsius() {
+            var celsiusInput = document.getElementById("inputSuhu").value;
+            var fahrenheit = (celsiusInput * 9 / 5) + 32;
+            displayResult(fahrenheit, "Fahrenheit");
+        }
+
+        function Fahrenheit() {
+            var fahrenheitInput = document.getElementById("inputSuhu").value;
+            var celsius = (fahrenheitInput - 32) * 5 / 9;
+            displayResult(celsius, "Celsius");
+        }
+
+        function displayResult(value, unit) {
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "Hasil konversi: " + value + " " + unit;
+        }
+    </script>
+</body>
+
+</html>
